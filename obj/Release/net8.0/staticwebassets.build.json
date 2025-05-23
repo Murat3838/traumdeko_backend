@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "QCUIusRPl0wdYJAHjmRsxhvd+8ALa22CnXfyLlVwrkY=",
+  "Source": "zeiterfassung.server",
+  "BasePath": "_content/zeiterfassung.server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

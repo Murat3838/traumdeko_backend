@@ -1,0 +1,20 @@
+{
+  "Version": 1,
+  "Hash": "XBTYHiOVCu/HaQHOiyZBGo0SRXyOw39ICBbJWYhL5ME=",
+  "Source": "zeiterfassung.server",
+  "BasePath": "_content/zeiterfassung.server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "zeiterfassung.server\\wwwroot",
+      "Source": "zeiterfassung.server",
+      "ContentRoot": "C:\\Users\\m.ilhan\\source\\repos\\zeiterfassung.server\\wwwroot\\",
+      "BasePath": "_content/zeiterfassung.server",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [],
+  "Endpoints": []
+}

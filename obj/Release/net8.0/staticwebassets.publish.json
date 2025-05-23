@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "oZl8cYPw6zB+UJbMt8snOigPPjvTTDhyjzeUUXJt0Rw=",
+  "Source": "zeiterfassung.server",
+  "BasePath": "_content/zeiterfassung.server",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

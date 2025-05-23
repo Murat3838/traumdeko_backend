@@ -1,0 +1,6 @@
+@zeiterfassung.server_HostAddress = http://localhost:5008
+
+GET {{zeiterfassung.server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
