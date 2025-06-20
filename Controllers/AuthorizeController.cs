@@ -14,7 +14,6 @@ using VeragWebApp.Repos;
 using VeragWebApp.Repos.Models;
 using VeragWebApp.Service;
 using VeragWebApp.server.Helper;
-using VeragTvApp.server.Services;
 
 namespace VeragWebApp.Controllers
 {

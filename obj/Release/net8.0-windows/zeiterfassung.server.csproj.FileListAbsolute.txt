@@ -184,3 +184,4 @@ C:\Users\m.ilhan\source\repos\zeiterfassung.server\bin\Release\net8.0-windows\pa
 C:\Users\m.ilhan\source\repos\zeiterfassung.server\bin\Release\net8.0-windows\zeiterfassung.server.staticwebassets.runtime.json
 C:\Users\m.ilhan\source\repos\zeiterfassung.server\bin\Release\net8.0-windows\System.CodeDom.dll
 C:\Users\m.ilhan\source\repos\zeiterfassung.server\bin\Release\net8.0-windows\System.Security.Cryptography.ProtectedData.dll
+C:\Users\m.ilhan\source\repos\zeiterfassung.server\obj\Release\net8.0-windows\zeiterfassung.server.sourcelink.json

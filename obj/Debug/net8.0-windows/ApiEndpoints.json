@@ -26,6 +26,470 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "VeragWebApp.Controllers.EventsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Events",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[VeragWebApp.Repos.Models.Event, zeiterfassung.server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.EventsController",
+    "Method": "Create",
+    "RelativePath": "api/Events",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ev",
+        "Type": "VeragWebApp.Repos.Models.Event",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VeragWebApp.Repos.Models.Event",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.EventsController",
+    "Method": "Get",
+    "RelativePath": "api/Events/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VeragWebApp.Repos.Models.Event",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.EventsController",
+    "Method": "Update",
+    "RelativePath": "api/Events/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ev",
+        "Type": "VeragWebApp.Repos.Models.Event",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.EventsController",
+    "Method": "Delete",
+    "RelativePath": "api/Events/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.EventsController",
+    "Method": "Close",
+    "RelativePath": "api/Events/{id}/close",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.EventTypesController",
+    "Method": "GetAll",
+    "RelativePath": "api/EventTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[VeragWebApp.Repos.Models.EventType, zeiterfassung.server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.EventTypesController",
+    "Method": "Create",
+    "RelativePath": "api/EventTypes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "type",
+        "Type": "VeragWebApp.Repos.Models.EventType",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VeragWebApp.Repos.Models.EventType",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.EventTypesController",
+    "Method": "Get",
+    "RelativePath": "api/EventTypes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VeragWebApp.Repos.Models.EventType",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.EventTypesController",
+    "Method": "Update",
+    "RelativePath": "api/EventTypes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "type",
+        "Type": "VeragWebApp.Repos.Models.EventType",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.EventTypesController",
+    "Method": "Delete",
+    "RelativePath": "api/EventTypes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.ExpensesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Expenses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "eventId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[VeragWebApp.Repos.Models.Expense, zeiterfassung.server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.ExpensesController",
+    "Method": "Create",
+    "RelativePath": "api/Expenses",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "expense",
+        "Type": "VeragWebApp.Repos.Models.Expense",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VeragWebApp.Repos.Models.Expense",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.ExpensesController",
+    "Method": "Get",
+    "RelativePath": "api/Expenses/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VeragWebApp.Repos.Models.Expense",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.ExpensesController",
+    "Method": "Update",
+    "RelativePath": "api/Expenses/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "expense",
+        "Type": "VeragWebApp.Repos.Models.Expense",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.ExpensesController",
+    "Method": "Delete",
+    "RelativePath": "api/Expenses/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.IncomesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Incomes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "eventId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[VeragWebApp.Repos.Models.Income, zeiterfassung.server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.IncomesController",
+    "Method": "Create",
+    "RelativePath": "api/Incomes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "income",
+        "Type": "VeragWebApp.Repos.Models.Income",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VeragWebApp.Repos.Models.Income",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.IncomesController",
+    "Method": "Get",
+    "RelativePath": "api/Incomes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VeragWebApp.Repos.Models.Income",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.IncomesController",
+    "Method": "Update",
+    "RelativePath": "api/Incomes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "income",
+        "Type": "VeragWebApp.Repos.Models.Income",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VeragWebApp.Controllers.IncomesController",
+    "Method": "Delete",
+    "RelativePath": "api/Incomes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "VeragTvApp.server.Controllers.LogoutController",
     "Method": "Logout",
     "RelativePath": "api/Logout",
@@ -33,230 +497,6 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "VeragTvApp.server.Controllers.Zeiterfassung.ZeiterfassungController",
-    "Method": "GetMonthlyBalance",
-    "RelativePath": "api/Zeiterfassung/{employeeId}/monthly-balance",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "employeeId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "year",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "month",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "VeragTvApp.server.Controllers.Zeiterfassung.ZeiterfassungController",
-    "Method": "GetEmployee",
-    "RelativePath": "api/Zeiterfassung/GetEmployee/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "VeragTvApp.server.Controllers.Zeiterfassung.ZeiterfassungController",
-    "Method": "GetEmployeeBookings",
-    "RelativePath": "api/Zeiterfassung/GetEmployeeBookings/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "year",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "month",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "VeragTvApp.server.Controllers.Zeiterfassung.ZeiterfassungController",
-    "Method": "GetEmployeeData",
-    "RelativePath": "api/Zeiterfassung/GetEmployeeData/{employeeId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "employeeId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "year",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "month",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "VeragTvApp.server.Controllers.Zeiterfassung.ZeiterfassungController",
-    "Method": "GetEmployeeDayValues",
-    "RelativePath": "api/Zeiterfassung/GetEmployeeDayValues/{employeeId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "employeeId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "year",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "month",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "VeragTvApp.server.Controllers.Zeiterfassung.ZeiterfassungController",
-    "Method": "GetEmployeeHolidayListAsync",
-    "RelativePath": "api/Zeiterfassung/GetEmployeeHolidayList",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "groupName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "month",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "year",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "VeragTvApp.server.Controllers.Zeiterfassung.ZeiterfassungController",
-    "Method": "GetEmployeeHolidays",
-    "RelativePath": "api/Zeiterfassung/GetEmployeeHolidays",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "employeeId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "year",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "month",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "VeragTvApp.server.Controllers.Zeiterfassung.ZeiterfassungController",
-    "Method": "GetEmployeeList",
-    "RelativePath": "api/Zeiterfassung/GetEmployeeList",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "VeragTvApp.server.Controllers.Zeiterfassung.ZeiterfassungController",
-    "Method": "GetTimeAccounts",
-    "RelativePath": "api/Zeiterfassung/GetTimeAccounts",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "employeeNr",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "from",
-        "Type": "System.DateTime",
-        "IsRequired": false
-      },
-      {
-        "Name": "toDate",
-        "Type": "System.DateTime",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "VeragTvApp.server.Controllers.Zeiterfassung.ZeiterfassungController",
-    "Method": "SetTimeAccountEntries",
-    "RelativePath": "api/Zeiterfassung/SetTimeAccountEntries",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "VeragTvApp.server.Models.Zeiterfassung.SetTimeAccountEntriesRequest",
-        "IsRequired": true
-      }
-    ],
     "ReturnTypes": []
   },
   {

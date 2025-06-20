@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using VeragWebApp.Modal;
 using VeragWebApp.Repos.Models;
@@ -24,6 +24,12 @@ public partial class VeragDB : DbContext
 
  
     public virtual DbSet<TblUser> TblUsers { get; set; }
+
+    // Neue Tabellen
+    public virtual DbSet<Expense> Expenses { get; set; }
+    public virtual DbSet<Income> Incomes { get; set; }
+    public virtual DbSet<Event> Events { get; set; }
+    public virtual DbSet<EventType> EventTypes { get; set; }
      
  
 

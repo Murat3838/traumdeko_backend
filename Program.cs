@@ -1,45 +1,74 @@
-﻿using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.DependencyInjection;
 
 using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using System.Reflection;
-using VeragTvApp.server.Services;
 using Microsoft.Extensions.Options;
 using System.Text;
-using VeragTvApp.server.Models.Zeiterfassung;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using Serilog.Events;
 using AutoMapper;
-using VeragTvApp.server.Services;
 using VeragWebApp.Helper;
 using VeragWebApp.Service;
 using VeragWebApp.Repos;
 using VeragWebApp.Container;
 using VeragWebApp.Modal;
 using System.Security.Claims;
- 
+using System.Net;
+using System.Net.Security;
+using System.Security.Authentication;
+
+ServicePointManager.SecurityProtocol =
+      SecurityProtocolType.Tls    // TLS 1.0
+    | SecurityProtocolType.Tls11  // TLS 1.1
+    | SecurityProtocolType.Tls12  // TLS 1.2
+    | SecurityProtocolType.Tls13; // TLS 1.3 
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Registrierung der Konfigurationsklassen
-builder.Services.Configure<ApiSettings>(builder.Configuration.GetSection("ApiSettings"));
 
+
+builder.Services
+    .AddHttpClient("LegacyTlsClient")
+    .ConfigurePrimaryHttpMessageHandler(() =>
+        new SocketsHttpHandler
+        {
+            SslOptions = new SslClientAuthenticationOptions
+            {
+                // explizit auch TLS1.0 und TLS1.1 freigeben
+                EnabledSslProtocols = SslProtocols.Tls    // TLS 1.0
+                                    | SslProtocols.Tls11  // TLS 1.1
+                                    | SslProtocols.Tls12  // TLS 1.2
+                                    | SslProtocols.Tls13  // TLS 1.3
+            }
+        }
+    );
+
+
+
+// Registrierung der Konfigurationsklassen
+ 
 
 // **WICHTIG:** Registrierung von IHttpClientFactory
 builder.Services.AddHttpClient();
 
-// Registrierung des ZeiterfassungServices als konkreter Typ...
-builder.Services.AddScoped<ZeiterfassungServices>();
-
  
+
+
 
 // Registrierung von benutzerbezogenen Services (User, Roles, Refresh Token Handler)
 builder.Services.AddTransient<IRefreshHandler, RefreshHandler>();
 
 // Konfiguration des Datenbankkontexts für Benutzer- und Rollendaten
 builder.Services.AddDbContext<VeragDB>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        new MySqlServerVersion(new Version(8, 0, 36)) // Passe ggf. die Version an
+    )
 );
 
 // JWT Settings Konfiguration – Annahme, dass in der Konfiguration unter "JwtSettings" entsprechende Werte hinterlegt sind
@@ -85,7 +114,10 @@ builder.Services.AddSingleton(mapper);
 // ------------------------------------------------------------------
 
 // **WICHTIG:** Hinzufügen von Controllers
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(o =>
+{
+    o.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+});
 
 // Hinzufügen von Swagger für die API-Dokumentation
 builder.Services.AddEndpointsApiExplorer();
@@ -112,7 +144,7 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy", policy =>
-        policy.WithOrigins("https://zeit.app.verag.ag", "http://localhost:8100") // Ersetze durch deine tatsächliche Origin
+        policy.WithOrigins("https://zeit.app.verag.ag", "http://localhost:8100", "http://localhost:80") // Ersetze durch deine tatsächliche Origin
               .AllowAnyMethod()
               .AllowAnyHeader()
               .AllowCredentials()); // Erlaube Credentials wie Cookies
