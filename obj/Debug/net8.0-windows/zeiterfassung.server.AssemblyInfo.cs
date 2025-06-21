@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("zeiterfassung.server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eaea0aff67fbc2a7b6a14af21d55cfec169330ad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c71809b768ae0f008002ff2e37b98a2352e15348")]
 [assembly: System.Reflection.AssemblyProductAttribute("zeiterfassung.server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("zeiterfassung.server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

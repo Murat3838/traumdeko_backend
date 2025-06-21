@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VeragWebApp.Repos;
 
@@ -11,9 +12,11 @@ using VeragWebApp.Repos;
 namespace zeiterfassung.server.Migrations
 {
     [DbContext(typeof(VeragDB))]
-    partial class VeragDBModelSnapshot : ModelSnapshot
+    [Migration("20250620233227_AddTodos")]
+    partial class AddTodos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

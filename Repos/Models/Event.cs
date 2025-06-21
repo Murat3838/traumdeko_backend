@@ -60,4 +60,6 @@ public class Event
     public EventType? EventType { get; set; }
 
     public ICollection<Income>? Incomes { get; set; }
+
+    public ICollection<Todo>? Todos { get; set; }
 }

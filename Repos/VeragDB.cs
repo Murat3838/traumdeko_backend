@@ -30,6 +30,7 @@ public partial class VeragDB : DbContext
     public virtual DbSet<Income> Incomes { get; set; }
     public virtual DbSet<Event> Events { get; set; }
     public virtual DbSet<EventType> EventTypes { get; set; }
+    public virtual DbSet<Todo> Todos { get; set; }
      
  
 
