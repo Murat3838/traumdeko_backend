@@ -4210,9 +4210,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\m.ilhan\\Documents\\Verag Zeiterfassungs App\\zeiterfassung.server\\zeiterfassung.server.csproj",
-      "projectName": "zeiterfassung.server",
-      "projectPath": "C:\\Users\\m.ilhan\\Documents\\Verag Zeiterfassungs App\\zeiterfassung.server\\zeiterfassung.server.csproj",
+      "projectUniqueName": "C:\\Users\\m.ilhan\\Documents\\Verag Zeiterfassungs App\\zeiterfassung.server\\Traumdeko.backend.csproj",
+      "projectName": "Traumdeko.backend",
+      "projectPath": "C:\\Users\\m.ilhan\\Documents\\Verag Zeiterfassungs App\\zeiterfassung.server\\Traumdeko.backend.csproj",
       "packagesPath": "C:\\Users\\m.ilhan\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\m.ilhan\\Documents\\Verag Zeiterfassungs App\\zeiterfassung.server\\obj\\",
       "projectStyle": "PackageReference",

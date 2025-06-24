@@ -64,12 +64,19 @@ builder.Services.AddHttpClient();
 builder.Services.AddTransient<IRefreshHandler, RefreshHandler>();
 
 // Konfiguration des Datenbankkontexts für Benutzer- und Rollendaten
+// using Microsoft.EntityFrameworkCore;
 builder.Services.AddDbContext<VeragDB>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
-        new MySqlServerVersion(new Version(8, 0, 36)) // Passe ggf. die Version an
+        new MySqlServerVersion(new Version(8, 0, 36)),
+        mySqlOptions => mySqlOptions
+            .EnableRetryOnFailure(          // <<<<<<<<<<
+                maxRetryCount: 5,           // 5 Versuche
+                maxRetryDelay: TimeSpan.FromSeconds(10),
+                errorNumbersToAdd: null)   // zusätzliche MySQL-ErrorCodes
     )
 );
+
 
 // JWT Settings Konfiguration – Annahme, dass in der Konfiguration unter "JwtSettings" entsprechende Werte hinterlegt sind
 var jwtSettingsSection = builder.Configuration.GetSection("JwtSettings");
@@ -188,9 +195,15 @@ builder.Services.AddSingleton<Serilog.ILogger>(requestLogger);
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsProduction())
 {
-    app.UseDeveloperExceptionPage();
+    app.UseDefaultFiles();          // liefert index.html bei "/"
+    app.UseStaticFiles();           // bedient wwwroot/
+    app.MapFallbackToFile("index.html"); // SPA-Routing
+}
+
+
+app.UseDeveloperExceptionPage();
 
     // Aktiviere Swagger und Swagger UI
     app.UseSwagger();
@@ -199,7 +212,7 @@ if (app.Environment.IsDevelopment())
         app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AvisoAPI v1"));
         c.RoutePrefix = string.Empty; // Swagger UI unter der Root-URL verfügbar machen
     });
-}
+ 
 
 // Optional: HTTPS-Weiterleitung aktivieren
 // app.UseHttpsRedirection();

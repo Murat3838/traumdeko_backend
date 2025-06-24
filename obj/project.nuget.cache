@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2kuHoqWh5JM=",
+  "dgSpecHash": "s5epyLEQSzg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\m.ilhan\\Documents\\Verag Zeiterfassungs App\\zeiterfassung.server\\zeiterfassung.server.csproj",
+  "projectFilePath": "C:\\Users\\m.ilhan\\Documents\\Verag Zeiterfassungs App\\zeiterfassung.server\\Traumdeko.backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\m.ilhan\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\m.ilhan\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",

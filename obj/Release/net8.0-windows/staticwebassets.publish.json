@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "oZl8cYPw6zB+UJbMt8snOigPPjvTTDhyjzeUUXJt0Rw=",
-  "Source": "zeiterfassung.server",
-  "BasePath": "_content/zeiterfassung.server",
+  "Hash": "jMuGFVmxc7R7eqfDj9VmzxoijkimibyZLsq10NQC7G0=",
+  "Source": "Traumdeko.backend",
+  "BasePath": "_content/Traumdeko.backend",
   "Mode": "Default",
   "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

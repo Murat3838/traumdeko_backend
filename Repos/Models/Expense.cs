@@ -36,4 +36,7 @@ public class Expense
 
     [Column("payer")]
     public Payer Payer { get; set; }
+
+    [Column("original_payer")]
+    public Payer? OriginalPayer { get; set; }
 }

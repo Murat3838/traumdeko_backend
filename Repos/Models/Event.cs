@@ -53,6 +53,18 @@ public class Event
     [Column("notes")]
     public string? Notes { get; set; }
 
+    public bool Backdrop { get; set; }
+
+    public bool GuestTables { get; set; }
+
+    public int? GuestCount { get; set; }
+
+    public bool Catering { get; set; }
+
+    public string? Dish { get; set; }
+
+    public int? CateringCount { get; set; }
+
     [Column("event_type_id")]
     public int? EventTypeId { get; set; }
 

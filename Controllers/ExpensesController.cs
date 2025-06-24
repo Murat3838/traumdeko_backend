@@ -78,4 +78,29 @@ public class ExpensesController : ControllerBase
         await _db.SaveChangesAsync();
         return NoContent();
     }
+
+    [HttpPost("{id}/reimburse")]
+    public async Task<IActionResult> Reimburse(int id)
+    {
+        var expense = await _db.Expenses.FindAsync(id);
+
+        if (expense == null)
+        {
+            return NotFound();
+        }
+
+        if (expense.OriginalPayer.HasValue)
+        {
+            return BadRequest("Expense has already been reimbursed.");
+        }
+
+        expense.OriginalPayer = expense.Payer;
+        expense.Payer = Payer.Firma;
+
+        _db.Entry(expense).State = EntityState.Modified;
+
+        await _db.SaveChangesAsync();
+
+        return NoContent();
+    }
 }

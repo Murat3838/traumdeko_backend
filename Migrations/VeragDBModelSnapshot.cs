@@ -30,6 +30,15 @@ namespace zeiterfassung.server.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("Backdrop")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<bool>("Catering")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<int?>("CateringCount")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("ClosedAt")
                         .HasColumnType("datetime(6)")
                         .HasColumnName("closed_at");
@@ -47,6 +56,9 @@ namespace zeiterfassung.server.Migrations
                         .HasColumnType("decimal(65,30)")
                         .HasColumnName("deposit");
 
+                    b.Property<string>("Dish")
+                        .HasColumnType("longtext");
+
                     b.Property<DateTime>("EventDate")
                         .HasColumnType("datetime(6)")
                         .HasColumnName("event_date");
@@ -62,6 +74,12 @@ namespace zeiterfassung.server.Migrations
                     b.Property<int?>("EventTypeId")
                         .HasColumnType("int")
                         .HasColumnName("event_type_id");
+
+                    b.Property<int?>("GuestCount")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("GuestTables")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<bool>("IsClosed")
                         .HasColumnType("tinyint(1)")
@@ -106,6 +124,9 @@ namespace zeiterfassung.server.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("IsCostCategory")
+                        .HasColumnType("tinyint(1)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -142,6 +163,10 @@ namespace zeiterfassung.server.Migrations
                     b.Property<int?>("EventId")
                         .HasColumnType("int")
                         .HasColumnName("event_id");
+
+                    b.Property<int?>("OriginalPayer")
+                        .HasColumnType("int")
+                        .HasColumnName("original_payer");
 
                     b.Property<int>("Payer")
                         .HasColumnType("int")
@@ -245,7 +270,7 @@ namespace zeiterfassung.server.Migrations
 
                     b.HasKey("username");
 
-                    b.ToTable("tblRole");
+                    b.ToTable("tblrole");
                 });
 
             modelBuilder.Entity("VeragWebApp.Repos.Models.TblUser", b =>
@@ -298,7 +323,7 @@ namespace zeiterfassung.server.Migrations
 
                     b.HasKey("Username");
 
-                    b.ToTable("tblMitarbeiter");
+                    b.ToTable("tblmitarbeiter");
                 });
 
             modelBuilder.Entity("VeragWebApp.Repos.Models.Todo", b =>

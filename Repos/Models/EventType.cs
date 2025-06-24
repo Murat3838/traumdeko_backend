@@ -12,7 +12,9 @@ public class EventType
 
     [Column("name")]
     [MaxLength(100)]
-    public string Name { get; set; } = string.Empty;
+    public string Name { get; set; } = default!;
+
+    public bool IsCostCategory { get; set; }
 
     public ICollection<Event>? Events { get; set; }
 }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace VeragWebApp.Repos.Models;
 
-[Table("tblMitarbeiter")]
+[Table("tblmitarbeiter")]
 public partial class TblUser
 {
     [Key]

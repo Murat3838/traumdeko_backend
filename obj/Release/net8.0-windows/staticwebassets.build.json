@@ -1,12 +1,19 @@
 {
   "Version": 1,
-  "Hash": "QCUIusRPl0wdYJAHjmRsxhvd+8ALa22CnXfyLlVwrkY=",
-  "Source": "zeiterfassung.server",
-  "BasePath": "_content/zeiterfassung.server",
+  "Hash": "mTOvm1Jsonu74oPI8/akE7J57Qx5E76ebNWetCwBeJ4=",
+  "Source": "Traumdeko.backend",
+  "BasePath": "_content/Traumdeko.backend",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Traumdeko.backend\\wwwroot",
+      "Source": "Traumdeko.backend",
+      "ContentRoot": "C:\\Users\\m.ilhan\\Documents\\Verag Zeiterfassungs App\\zeiterfassung.server\\wwwroot\\",
+      "BasePath": "_content/Traumdeko.backend",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
 }
