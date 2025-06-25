@@ -144,10 +144,3 @@ C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Rel
 C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\Traumdeko.backend.pdb
 C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\Traumdeko.backend.genruntimeconfig.cache
 C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\ref\Traumdeko.backend.dll
-C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\bin\Release\net8.0-windows\publish\web.config
-C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\bin\Release\net8.0-windows\publish\appsettings.Development.json
-C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\bin\Release\net8.0-windows\publish\appsettings.json
-C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\bin\Release\net8.0-windows\publish\package-lock.json
-C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\bin\Release\net8.0-windows\publish\package.json
-C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\bin\Release\net8.0-windows\publish\Traumdeko.backend.deps.json
-C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\bin\Release\net8.0-windows\publish\Traumdeko.backend.runtimeconfig.json

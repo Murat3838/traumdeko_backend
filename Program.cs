@@ -195,13 +195,11 @@ builder.Services.AddSingleton<Serilog.ILogger>(requestLogger);
 
 var app = builder.Build();
 
-if (app.Environment.IsProduction())
-{
+ 
     app.UseDefaultFiles();          // liefert index.html bei "/"
     app.UseStaticFiles();           // bedient wwwroot/
     app.MapFallbackToFile("index.html"); // SPA-Routing
-}
-
+ 
 
 app.UseDeveloperExceptionPage();
 

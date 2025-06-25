@@ -550,8 +550,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "todo",
-        "Type": "VeragWebApp.Repos.Models.Todo",
+        "Name": "request",
+        "Type": "VeragWebApp.Controllers.TodoRequest",
         "IsRequired": true
       }
     ],
@@ -607,8 +607,8 @@
         "IsRequired": true
       },
       {
-        "Name": "todo",
-        "Type": "VeragWebApp.Repos.Models.Todo",
+        "Name": "request",
+        "Type": "VeragWebApp.Controllers.TodoRequest",
         "IsRequired": true
       }
     ],

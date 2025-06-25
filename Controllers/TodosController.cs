@@ -6,6 +6,11 @@ using VeragWebApp.Repos.Models;
 
 namespace VeragWebApp.Controllers;
 
+public class TodoRequest
+{
+    public Todo Todo { get; set; }
+}
+
 [ApiController]
 [Route("api/[controller]")]
 public class TodosController : ControllerBase
@@ -52,8 +57,9 @@ public class TodosController : ControllerBase
 
     // POST: api/todos
     [HttpPost]
-    public async Task<ActionResult<Todo>> Create([FromBody] Todo todo)
+    public async Task<ActionResult<Todo>> Create([FromBody] TodoRequest request)
     {
+        var todo = request.Todo;
         if (!await _db.Events.AnyAsync(e => e.Id == todo.EventId))
             return BadRequest("Event not found");
         if (todo.Assignee != null && !_allowedAssignees.Contains(todo.Assignee, StringComparer.OrdinalIgnoreCase))
@@ -75,8 +81,9 @@ public class TodosController : ControllerBase
 
     // PUT api/todos/10
     [HttpPut("{id}")]
-    public async Task<IActionResult> Update(int id, [FromBody] Todo todo)
+    public async Task<IActionResult> Update(int id, [FromBody] TodoRequest request)
     {
+        var todo = request.Todo;
         if (id != todo.Id) return BadRequest();
         if (todo.Assignee != null && !_allowedAssignees.Contains(todo.Assignee, StringComparer.OrdinalIgnoreCase))
             return BadRequest("Assignee must be Hanife or Murad");
