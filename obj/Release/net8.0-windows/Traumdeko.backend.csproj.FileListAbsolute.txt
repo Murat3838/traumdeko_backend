@@ -132,11 +132,6 @@ C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Rel
 C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\Traumdeko.backend.sourcelink.json
 C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\staticwebassets.build.json
 C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\staticwebassets.development.json
-C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\staticwebassets\msbuild.Traumdeko.backend.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\staticwebassets\msbuild.build.Traumdeko.backend.props
-C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\staticwebassets\msbuild.buildMultiTargeting.Traumdeko.backend.props
-C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\staticwebassets\msbuild.buildTransitive.Traumdeko.backend.props
-C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\staticwebassets.pack.json
 C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\scopedcss\bundle\Traumdeko.backend.styles.css
 C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\Traumdek.3C704508.Up2Date
 C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\Traumdeko.backend.dll
@@ -144,3 +139,11 @@ C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Rel
 C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\Traumdeko.backend.pdb
 C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\Traumdeko.backend.genruntimeconfig.cache
 C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\ref\Traumdeko.backend.dll
+C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\bin\Release\net8.0-windows\Traumdeko.backend.staticwebassets.endpoints.json
+C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\rpswa.dswa.cache.json
+C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\rjimswa.dswa.cache.json
+C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\rjsmrazor.dswa.cache.json
+C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\rjsmcshtml.dswa.cache.json
+C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\staticwebassets.build.json.cache
+C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\staticwebassets.build.endpoints.json
+C:\Users\m.ilhan\Documents\Verag Zeiterfassungs App\zeiterfassung.server\obj\Release\net8.0-windows\staticwebassets.upToDateCheck.txt

@@ -151,6 +151,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "VeragWebApp.Controllers.EventsController",
+    "Method": "Reopen",
+    "RelativePath": "api/Events/{id}/reopen",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "VeragWebApp.Controllers.EventTypesController",
     "Method": "GetAll",
     "RelativePath": "api/EventTypes",

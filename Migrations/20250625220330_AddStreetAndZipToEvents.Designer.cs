@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VeragWebApp.Repos;
 
@@ -11,9 +12,11 @@ using VeragWebApp.Repos;
 namespace zeiterfassung.server.Migrations
 {
     [DbContext(typeof(VeragDB))]
-    partial class VeragDBModelSnapshot : ModelSnapshot
+    [Migration("20250625220330_AddStreetAndZipToEvents")]
+    partial class AddStreetAndZipToEvents
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -109,10 +112,6 @@ namespace zeiterfassung.server.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("varchar(150)")
                         .HasColumnName("street");
-
-                    b.Property<decimal?>("Tip")
-                        .HasColumnType("decimal(65,30)")
-                        .HasColumnName("tip");
 
                     b.Property<decimal>("TotalAmount")
                         .HasColumnType("decimal(65,30)")

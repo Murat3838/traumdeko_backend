@@ -87,6 +87,26 @@ public class EventsController : ControllerBase
         return NoContent();
     }
 
+    [HttpPost("{id}/reopen")]
+    public async Task<IActionResult> Reopen(int id)
+    {
+        var ev = await _db.Events.FindAsync(id);
+        if (ev == null) return NotFound();
+
+        if (!ev.IsClosed)
+        {
+            return BadRequest("Das Event ist nicht abgeschlossen.");
+        }
+        
+        ev.IsClosed = false;
+        ev.ClosedAt = null;
+
+        _db.Entry(ev).State = EntityState.Modified;
+        await _db.SaveChangesAsync();
+
+        return NoContent();
+    }
+
     [HttpPost("{id}/close")]
     public async Task<IActionResult> Close(int id)
     {
@@ -99,17 +119,41 @@ public class EventsController : ControllerBase
         ev.IsClosed = true;
         ev.ClosedAt = DateTime.UtcNow;
 
-        // automatisch eine Einnahme buchen, falls noch keine existiert
-        if (!await _db.Incomes.AnyAsync(i => i.EventId == ev.Id))
+        // automatisch Einnahme(n) buchen:
+        // 1) Summe aller bereits vorhandenen Einnahmen für dieses Event ermitteln
+        var existingSum = await _db.Incomes
+            .Where(i => i.EventId == ev.Id)
+            .SumAsync(i => (decimal?)i.Amount) ?? 0m;
+
+        // 2) Wenn die vorhandenen Einnahmen kleiner als der Gesamtbetrag sind, buche den Rest
+        var remaining = ev.TotalAmount - existingSum;
+        if (remaining > 0)
         {
             var inc = new Income
             {
                 Date = ev.ClosedAt.Value,
                 Description = $"Einnahme Event: {ev.Name}",
-                Amount = ev.TotalAmount,
+                Amount = remaining,
                 EventId = ev.Id
             };
             _db.Incomes.Add(inc);
+        }
+
+        // 3) Trinkgeld separat buchen, falls vorhanden und noch nicht verbucht
+        if (ev.Tip.HasValue && ev.Tip.Value > 0)
+        {
+            bool tipExists = await _db.Incomes.AnyAsync(i => i.EventId == ev.Id && i.Description.StartsWith($"Trinkgeld Event:"));
+            if (!tipExists)
+            {
+                var tipIncome = new Income
+                {
+                    Date = ev.ClosedAt.Value,
+                    Description = $"Trinkgeld Event: {ev.Name}",
+                    Amount = ev.Tip.Value,
+                    EventId = ev.Id
+                };
+                _db.Incomes.Add(tipIncome);
+            }
         }
 
         await _db.SaveChangesAsync();

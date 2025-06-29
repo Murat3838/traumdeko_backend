@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "s5epyLEQSzg=",
+  "dgSpecHash": "wd2qrF9oE+M=",
   "success": true,
   "projectFilePath": "C:\\Users\\m.ilhan\\Documents\\Verag Zeiterfassungs App\\zeiterfassung.server\\Traumdeko.backend.csproj",
   "expectedPackageFiles": [
@@ -88,5 +88,15 @@
     "C:\\Users\\m.ilhan\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "C:\\Users\\m.ilhan\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Fehler beim Abrufen von Paketsicherheitsrisikodaten: Der Dienstindex für die Quelle \"https://api.nuget.org/v3/index.json\" konnte nicht geladen werden.",
+      "projectPath": "C:\\Users\\m.ilhan\\Documents\\Verag Zeiterfassungs App\\zeiterfassung.server\\Traumdeko.backend.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\m.ilhan\\Documents\\Verag Zeiterfassungs App\\zeiterfassung.server\\Traumdeko.backend.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

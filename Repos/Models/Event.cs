@@ -15,6 +15,13 @@ public class Event
     [MaxLength(100)]
     public string Name { get; set; } = string.Empty;
 
+    [NotMapped]
+    public string Ev
+    {
+        get => Name;
+        set => Name = value;
+    }
+
     [Column("customer_name")]
     [MaxLength(100)]
     public string? CustomerName { get; set; }
@@ -70,6 +77,17 @@ public class Event
 
     [ForeignKey("EventTypeId")]
     public EventType? EventType { get; set; }
+
+    [Column("street")]
+    [MaxLength(150)]
+    public string? Street { get; set; }
+
+    [Column("zip")]
+    [MaxLength(20)]
+    public string? Zip { get; set; }
+
+    [Column("tip")]
+    public decimal? Tip { get; set; }
 
     public ICollection<Income>? Incomes { get; set; }
 

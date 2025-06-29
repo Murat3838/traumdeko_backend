@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Traumdeko.backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21a398b0be6919c2f71ee53428b465fe5f1c4f06")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c2056ea0efc563860351a7b73af83b4651e2276")]
 [assembly: System.Reflection.AssemblyProductAttribute("Traumdeko.backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Traumdeko.backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
